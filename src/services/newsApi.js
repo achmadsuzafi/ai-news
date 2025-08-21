@@ -1,9 +1,9 @@
 import axios from 'axios';
 
 const API_KEYS = {
-  GNEWS: 'gnews-api-key',
-  NEWSAPI: 'newsapi-key', 
-  BING: 'bing-api-key'   
+  GNEWS: 'baba23dfb55b47ae9fec19e3b0b6710d',
+  NEWSAPI: 'd974626a04a0430d867a42bb023fe46f', 
+  NEWSDATA: 'pub_d6f135298b894351bee4776b11dbb847'  
 };
 
 export const fetchNews = async (keyword = 'AI') => {
@@ -11,8 +11,8 @@ export const fetchNews = async (keyword = 'AI') => {
     const sources = [
       axios.get(`https://gnews.io/api/v4/search?q=${keyword}&lang=en&max=10&apikey=${API_KEYS.GNEWS}`),
       axios.get(`https://newsapi.org/v2/everything?q=${keyword}&language=en&apiKey=${API_KEYS.NEWSAPI}`),
-      axios.get(`https://api.bing.microsoft.com/v7.0/news/search?q=${keyword}`, {
-        headers: { 'Ocp-Apim-Subscription-Key': API_KEYS.BING }
+      axios.get(`https://newsdata.io/api/1/news?apikey=${keyword}`, {
+        headers: { 'Ocp-Apim-Subscription-Key': API_KEYS.NEWSTADA }
       })
     ];
 

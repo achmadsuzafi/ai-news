@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { fetchNews } from './services/newsApi';
-import NewsGrid from './components/NewsGrid';
+import NewsGrid from  './components/NewsGrid';
 import SearchBar from './components/SearchBar';
 import './App.css';
 
@@ -33,7 +33,7 @@ function App() {
       )}
       
       <footer>
-        <p>© 2025 AI News Portal | Intern Project</p>
+        <p>© 2025 AI News Portal | by Achmad Suzafi</p>
       </footer>
     </div>
   );

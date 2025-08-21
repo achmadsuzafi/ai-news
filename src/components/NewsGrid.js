@@ -1,6 +1,6 @@
 import React from 'react';
 import NewsCard from './NewsCard';
-import './NewsGrid.css';
+import './NewsGrid.css'; // Assuming you have some styles for the grid
 
 const NewsGrid = ({ news }) => {
   if (!news.length) return <p>No news found. Try another search term.</p>;
